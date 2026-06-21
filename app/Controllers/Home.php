@@ -6,11 +6,14 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $data['titulo'] = 'CeluTech';
+        echo view('layouts/header.php', $data);
+        echo view('home');
+        echo view('layouts/footer.php');
     }
 
     public function prueba()
     {
-        return view('prueba');
+        return view('home');
     }
 }
