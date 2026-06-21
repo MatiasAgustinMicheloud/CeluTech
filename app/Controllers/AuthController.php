@@ -8,7 +8,11 @@ use App\Models\UsuarioModel;
 class AuthController extends BaseController{
     
     public function index(){
-        return view('auth/login');
+        // session()->destroy();
+        $data['titulo'] = 'Login - CeluTech';
+        echo view('layouts/header.php', $data);
+        echo view('auth/login');
+        echo view('layouts/footer.php');
     }
 
     public function login(){
