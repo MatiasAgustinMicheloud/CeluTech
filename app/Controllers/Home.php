@@ -11,9 +11,4 @@ class Home extends BaseController
         echo view('home');
         echo view('layouts/footer.php');
     }
-
-    public function prueba()
-    {
-        return view('home');
-    }
 }
