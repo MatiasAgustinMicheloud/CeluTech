@@ -45,14 +45,20 @@ $routes->post('/registro', 'AuthController::registrar');
 //Rutas para usuario Admin
 $routes->get('/admin/dashboard', 'Admin\DashboardController::index');
 
+//CRUD marcas
 $routes->get('admin/marcas', 'Admin\MarcaController::index');
 $routes->get('admin/marcas/crear', 'Admin\MarcaController::crear');
 $routes->post('admin/marcas/guardar', 'Admin\MarcaController::guardar');
 $routes->get('admin/marcas/editar/(:num)', 'Admin\MarcaController::editar/$1');
 $routes->post('admin/marcas/actualizar/(:num)', 'Admin\MarcaController::actualizar/$1');
 $routes->get('admin/marcas/eliminar/(:num)', 'Admin\MarcaController::eliminar/$1');
-
-
+//CRUD productos
+$routes->get('/admin/productos', 'Admin\ProductoController::index');
+$routes->get('/admin/productos/crear', 'Admin\ProductoController::crear');
+$routes->post('/admin/productos/guardar', 'Admin\ProductoController::guardar');
+$routes->get('/admin/productos/editar/(:num)', 'Admin\ProductoController::editar/$1');
+$routes->post('/admin/productos/actualizar/(:num)', 'Admin\ProductoController::actualizar/$1');
+$routes->get('/admin/productos/eliminar/(:num)', 'Admin\ProductoController::eliminar/$1');
 
 
 
