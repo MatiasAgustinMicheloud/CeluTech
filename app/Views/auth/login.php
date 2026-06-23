@@ -22,11 +22,11 @@
                         <?= csrf_field() ?>
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="email" name="usuario_email" class="form-control" required>
+                            <input type="email" name="usuario_email" class="form-control" value="<?= $old['usuario_email'] ?? '' ?>">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Contraseña</label>
-                            <input type="password" name="usuario_password" class="form-control" required>
+                            <input type="password" name="usuario_password" class="form-control" >
                         </div>
                         <button type="submit" class="btn btn-dark w-100 text-uppercase mt-3">Ingresar</button>
                     </form>
