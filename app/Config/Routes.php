@@ -29,13 +29,32 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//home
 $routes->get('/', 'Home::index');
+
+//Rutas sobre login y logout
 $routes->get('/login', 'AuthController::login');
 $routes->post('/login', 'AuthController::loginProcesar');
 $routes->get('/logout', 'AuthController::logout');
 
+//Rutas sobre registro
 $routes->get('/registro', 'AuthController::registro');
 $routes->post('/registro', 'AuthController::registrar');
+
+//Rutas para usuario Admin
+$routes->get('/admin/dashboard', 'Admin\DashboardController::index');
+
+$routes->get('admin/marcas', 'Admin\MarcaController::index');
+$routes->get('admin/marcas/crear', 'Admin\MarcaController::crear');
+$routes->post('admin/marcas/guardar', 'Admin\MarcaController::guardar');
+$routes->get('admin/marcas/editar/(:num)', 'Admin\MarcaController::editar/$1');
+$routes->post('admin/marcas/actualizar/(:num)', 'Admin\MarcaController::actualizar/$1');
+$routes->get('admin/marcas/eliminar/(:num)', 'Admin\MarcaController::eliminar/$1');
+
+
+
+
 
 /*
  * --------------------------------------------------------------------
