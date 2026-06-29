@@ -44,7 +44,6 @@ $routes->post('/registro', 'AuthController::registrar');
 
 //Rutas para usuario Admin
 $routes->get('/admin/dashboard', 'Admin\DashboardController::index');
-
 //CRUD marcas
 $routes->get('admin/marcas', 'Admin\MarcaController::index');
 $routes->get('admin/marcas/crear', 'Admin\MarcaController::crear');
@@ -59,6 +58,11 @@ $routes->post('/admin/productos/guardar', 'Admin\ProductoController::guardar');
 $routes->get('/admin/productos/editar/(:num)', 'Admin\ProductoController::editar/$1');
 $routes->post('/admin/productos/actualizar/(:num)', 'Admin\ProductoController::actualizar/$1');
 $routes->get('/admin/productos/eliminar/(:num)', 'Admin\ProductoController::eliminar/$1');
+
+
+//Routes de Catalogo
+$routes->get('/catalogo', 'CatalogoController::index');
+$routes->get('/catalogo/(:num)', 'CatalogoController::detalle/$1');
 
 
 

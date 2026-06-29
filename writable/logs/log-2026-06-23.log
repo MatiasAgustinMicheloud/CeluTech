@@ -135,3 +135,21 @@ in SYSTEMPATH\BaseModel.php on line 1680.
  6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MarcaController))
  7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-06-23 07:30:40 --> Invalid file: "catalogo/detalle.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('catalogo/detalle.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('catalogo/detalle', [], true)
+ 3 APPPATH\Controllers\CatalogoController.php(47): view('catalogo/detalle', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CatalogoController->detalle('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CatalogoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-06-23 07:31:00 --> Invalid file: "catalogo/detalle.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('catalogo/detalle.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('catalogo/detalle', [], true)
+ 3 APPPATH\Controllers\CatalogoController.php(47): view('catalogo/detalle', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CatalogoController->detalle('2')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CatalogoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
