@@ -65,6 +65,16 @@ $routes->get('/catalogo', 'CatalogoController::index');
 $routes->get('/catalogo/(:num)', 'CatalogoController::detalle/$1');
 
 
+//Rutas para el Carrito de compras
+$routes->get('/carrito', 'CarritoController::index');
+$routes->post('/carrito/agregar', 'CarritoController::agregar');
+$routes->get('/carrito/eliminar/(:num)', 'CarritoController::eliminar/$1');
+$routes->get('/carrito/vaciar', 'CarritoController::vaciar');
+
+//Rutas para la factura
+$routes->get('/checkout', 'CheckoutController::index');
+$routes->post('/checkout/confirmar', 'CheckoutController::confirmar');
+$routes->get('/factura/(:num)', 'CheckoutController::factura/$1');
 
 /*
  * --------------------------------------------------------------------

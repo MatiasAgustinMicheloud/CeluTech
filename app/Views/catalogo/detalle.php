@@ -23,6 +23,11 @@
             <hr>
             <p><?= $producto['producto_descripcion'] ?></p>
             <hr>
+
+            <?php if(session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+            <?php endif; ?>
+
             <form action="<?= base_url('carrito/agregar') ?>" method="POST">
                 <?= csrf_field() ?>
                 <input type="hidden" name="id_producto" value="<?= $producto['id_producto'] ?>">
