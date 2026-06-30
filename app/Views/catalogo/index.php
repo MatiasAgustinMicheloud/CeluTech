@@ -6,8 +6,13 @@
             <div class="card shadow p-3">
                 <h5 class="text-uppercase mb-3">Marcas</h5>
                 <ul class="list-unstyled">
+
                     <li class="mb-2">
-                        <a href="<?= base_url('catalogo') ?>" class="text-dark <?= !isset($marca_activa) || !$marca_activa ? 'fw-bold' : '' ?>">Todas</a>
+                        <a href="<?= base_url('catalogo?oferta=1') ?>" class="text-dark <?= isset($oferta_activa) && $oferta_activa ? 'fw-bold' : '' ?>">🔥 Ofertas</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="<?= base_url('catalogo') ?>" class="text-dark <?= (!isset($marca_activa) || !$marca_activa) && (!isset($oferta_activa) || !$oferta_activa) ? 'fw-bold' : '' ?>">Todas</a>
                     </li>
                     <?php foreach($marcas as $marca): ?>
                     <li class="mb-2">

@@ -7,12 +7,12 @@ use App\Models\MarcaModel;
 
 class CatalogoController extends BaseController
 {
-    public function index()
-    {
+    public function index(){
         $productoModel = new ProductoModel();
         $marcaModel = new MarcaModel();
 
         $marca = $this->request->getGet('marca');
+        $oferta = $this->request->getGet('oferta');
 
         $query = $productoModel
             ->select('productos.*, marcas.marca_nombre')
@@ -23,9 +23,14 @@ class CatalogoController extends BaseController
             $query->where('productos.id_marca', $marca);
         }
 
+        if ($oferta) {
+            $query->where('producto_precio_oferta IS NOT NULL');
+        }
+
         $data['productos'] = $query->findAll();
         $data['marcas'] = $marcaModel->where('marca_estado', 1)->findAll();
         $data['marca_activa'] = $marca;
+        $data['oferta_activa'] = $oferta;
         $data['titulo'] = 'Catálogo - CeluTech';
 
         echo view('layouts/header.php', $data);

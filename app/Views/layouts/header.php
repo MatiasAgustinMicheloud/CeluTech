@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CeluTech</title>
+    <!-- <title>CeluTech</title> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,9 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/style.css') ?>">
 
     
-    <link rel="stylesheet" href="/ci_CeluTech/public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/ci_CeluTech/public/style.css">
+    <!-- <link rel="stylesheet" href="/ci_CeluTech/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ci_CeluTech/public/style.css"> -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,39 +86,37 @@
       <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
         <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
       </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="github" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12c0-6.27-5.23-11.5-11.5-11.5z" />
+      </symbol>
     </svg>  
 
     <div class="search-popup">
         <div class="search-popup-container">
 
-          <form role="search" method="get" class="search-form" action="">
-            <input type="search" id="search-form" class="search-field" placeholder="Type and press enter" value="" name="s" />
-            <button type="submit" class="search-submit"><svg class="search"><use xlink:href="#search"></use></svg></button>
-          </form>
-
           <h5 class="cat-list-title">Marcas</h5>
           
           <ul class="cat-list">
             <li class="cat-list-item">
-              <a href="#" title="APPLE">APPLE</a>
+              <a href="<?= base_url('catalogo?marca=1') ?>" title="APPLE">APPLE</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="SAMSUNG">SAMSUNG</a>
+              <a href="<?= base_url('catalogo?marca=2') ?>" title="SAMSUNG">SAMSUNG</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="XIAOMI">XIAOMI</a>
+              <a href="<?= base_url('catalogo?marca=3') ?>" title="XIAOMI">XIAOMI</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="MOTOROLA">MOTOROLA</a>
+              <a href="<?= base_url('catalogo?marca=4') ?>" title="MOTOROLA">MOTOROLA</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="HUAWEI">HUAWEI</a>
+              <a href="<?= base_url('catalogo?marca=5') ?>" title="HUAWEI">HUAWEI</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="TCL">TCL</a>
+              <a href="<?= base_url('catalogo?marca=6') ?>" title="TCL">TCL</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="PIXEL">PIXEL</a>
+              <a href="<?= base_url('catalogo?marca=7') ?>" title="PIXEL">PIXEL</a>
             </li>
           </ul>
 
@@ -127,7 +126,7 @@
     <header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
       <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="<?= base_url('/') ?>">
             <img src="<?= base_url('public/images/main-logo.png') ?>" class="logo">
           </a>
           <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,7 +136,7 @@
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
             <div class="offcanvas-header px-4 pb-0">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="<?= base_url('/') ?>">
                 <img src="<?= base_url('public/images/main-logo.png') ?>" class="logo">
               </a>
               <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
@@ -145,13 +144,13 @@
             <div class="offcanvas-body">
               <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link me-4 active" href="#billboard">Home</a>
+                  <a class="nav-link me-4 active" href="<?= base_url('/') ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-4" href="#mobile-products">Productos</a>
+                  <a class="nav-link me-4" href="<?= base_url('catalogo') ?>">Productos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-4" href="#yearly-sale">Ofertas</a>
+                  <a class="nav-link me-4" href="<?= base_url('catalogo?oferta=1') ?>">Ofertas</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link me-4" href="#about">Sobre nosotros</a>
@@ -195,49 +194,16 @@
                   <?php endif; ?>
                 </li>
 
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Mi cuenta</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="carrito.html" class="dropdown-item">Carrito de compras</a>
-                    </li>
-                    <li>
-                      <a href="historial.html" class="dropdown-item">Historial de compras</a>
-                    </li>
-                    <li>
-                      <a href="#" class="dropdown-item">Logout</a>
-                    </li>
-                  </ul>
-                </li> -->
-
 
                 <li class="nav-item">
-                  <div class="user-items ps-5">
-                    <ul class="d-flex justify-content-end list-unstyled">
-                      <li class="search-item pe-3">
-                        <a href="#" class="search-button">
-                          <svg class="search">
-                            <use xlink:href="#search"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="pe-3">
-                        <a href="#">
-                          <svg class="user">
-                            <use xlink:href="#user"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="cart.html">
-                          <svg class="cart">
-                            <use xlink:href="#cart"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <a href="#" class="search-button ps-5">
+                      <svg class="search" style="width: 20px; height: 20px;">
+                          <use xlink:href="#search"></use>
+                      </svg>
+                  </a>
                 </li>
+
+                
               </ul>
             </div>
           </div>

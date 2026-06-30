@@ -6,7 +6,7 @@
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu">
                   <img src="<?= base_url('public/images/main-logo.png') ?>" alt="logo">
-                  <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
+                  <p>Tu tienda de confianza para celulares. Encontrá los mejores precios y la mejor calidad en CeluTech.</p>
                   
                 </div>
               </div>
@@ -16,37 +16,32 @@
                 <div class="footer-menu text-uppercase">
                   <h5 class="widget-title pb-2">Tienda</h5>
                   <ul class="menu-list list-unstyled text-uppercase">
-                    <li class="menu-item pb-2">
-                      <a href="#">Home</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Sobre nosotros</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Productos</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Ofertas</a>
-                    </li>
+                    <li class="menu-item pb-2"><a href="<?= base_url('/') ?>">Home</a></li>
+                    <li class="menu-item pb-2"><a href="#about">Sobre nosotros</a></li>
+                    <li class="menu-item pb-2"><a href="<?= base_url('catalogo') ?>">Productos</a></li>
+                    <li class="menu-item pb-2"><a href="<?= base_url('catalogo?oferta=1') ?>">Ofertas</a></li>
                   </ul>
                 </div>
               </div>
 
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu contact-item">
-                  <h5 class="widget-title text-uppercase pb-2">Contáctanos</h5>
-                  <p>Do you have any queries or suggestions? <a href="mailto:">yourinfo@gmail.com</a>
-                  </p>
-                  <p>If you need support? Just give us a call. <a href="">+55 111 222 333 44</a>
-                  </p>
-                  <div class="social-links">
-                    <p>Linkedin</p>
-                    <a href="#">
-                      <svg class="linkedin">
-                        <use xlink:href="#linkedin" />
-                      </svg>
-                    </a>
-                  </div>
+                    <h5 class="widget-title text-uppercase pb-2">Contáctanos</h5>
+                    <p class="mb-1"> <a href="mailto:contacto@celutech.com">contacto@celutech.com</a></p>
+                    <p class="mb-3"> <a href="tel:+543794123456">+54 379 412 3456</a></p>
+                    <hr>
+                    <div class="social-links">
+                      <a href="https://www.linkedin.com/in/mat%C3%ADas-micheloud-73147a244/" target="_blank" class="me-2">
+                          <svg class="linkedin">
+                              <use xlink:href="#linkedin" />
+                          </svg>
+                      </a>
+                      <a href="https://github.com/MatiasAgustinMicheloud/CeluTech" target="_blank">
+                          <svg class="linkedin" width="24" height="24">
+                              <use xlink:href="#github" />
+                          </svg>
+                      </a>
+                    </div>
                 </div>
               </div>
 
@@ -65,18 +60,8 @@
       <div class="container">
         <div class="row d-flex flex-wrap justify-content-between">
           <div class="col-md-4 col-sm-6">
-            <div class="payment-method d-flex">
-              <p>Payment options:</p>
-              <div class="card-wrap ps-2">
-                <img src="<?= base_url('public/images/visa.jpg') ?>" alt="visa">
-                <img src="<?= base_url('public/images/mastercard.jpg') ?>" alt="mastercard">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
             <div class="copyright">
-              <p>© Copyright 2026 CeluTech. Design by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a>
-              </p>
+              <p>© Copyright 2026 CeluTech. Todos los derechos reservados.</p>
             </div>
           </div>
         </div>
