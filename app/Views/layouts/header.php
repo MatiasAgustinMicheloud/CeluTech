@@ -156,7 +156,46 @@
                 <li class="nav-item">
                   <a class="nav-link me-4" href="#about">Sobre nosotros</a>
                 </li>
+
+
                 <li class="nav-item dropdown">
+                  <?php if(session()->get('logueado')): ?>
+                      <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                          Hola, <?= session()->get('usuario_nombre') ?>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <?php if(session()->get('id_perfil') == 1): ?>
+                              <li>
+                                  <a href="<?= base_url('admin/dashboard') ?>" class="dropdown-item">Panel Admin</a>
+                              </li>
+                          <?php else: ?>
+                              <li>
+                                  <a href="<?= base_url('carrito') ?>" class="dropdown-item">Carrito de compras</a>
+                              </li>
+                              <li>
+                                  <a href="<?= base_url('historial') ?>" class="dropdown-item">Historial de compras</a>
+                              </li>
+                          <?php endif; ?>
+                          <li>
+                              <a href="<?= base_url('logout') ?>" class="dropdown-item">Cerrar sesión</a>
+                          </li>
+                      </ul>
+                  <?php else: ?>
+                      <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                          Mi cuenta
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="<?= base_url('login') ?>" class="dropdown-item">Iniciar sesión</a>
+                          </li>
+                          <li>
+                              <a href="<?= base_url('registro') ?>" class="dropdown-item">Registrarse</a>
+                          </li>
+                      </ul>
+                  <?php endif; ?>
+                </li>
+
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Mi cuenta</a>
                   <ul class="dropdown-menu">
                     <li>
@@ -169,7 +208,9 @@
                       <a href="#" class="dropdown-item">Logout</a>
                     </li>
                   </ul>
-                </li>
+                </li> -->
+
+
                 <li class="nav-item">
                   <div class="user-items ps-5">
                     <ul class="d-flex justify-content-end list-unstyled">
