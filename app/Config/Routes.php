@@ -45,18 +45,23 @@ $routes->post('/registro', 'AuthController::registrar');
 //Rutas para usuario Admin
 $routes->group('admin', ['filter' => 'admin'], function($routes) {
     $routes->get('dashboard', 'Admin\DashboardController::index');
+
     $routes->get('marcas', 'Admin\MarcaController::index');
     $routes->get('marcas/crear', 'Admin\MarcaController::crear');
     $routes->post('marcas/guardar', 'Admin\MarcaController::guardar');
     $routes->get('marcas/editar/(:num)', 'Admin\MarcaController::editar/$1');
     $routes->post('marcas/actualizar/(:num)', 'Admin\MarcaController::actualizar/$1');
     $routes->get('marcas/eliminar/(:num)', 'Admin\MarcaController::eliminar/$1');
+    
     $routes->get('productos', 'Admin\ProductoController::index');
     $routes->get('productos/crear', 'Admin\ProductoController::crear');
     $routes->post('productos/guardar', 'Admin\ProductoController::guardar');
     $routes->get('productos/editar/(:num)', 'Admin\ProductoController::editar/$1');
     $routes->post('productos/actualizar/(:num)', 'Admin\ProductoController::actualizar/$1');
     $routes->get('productos/eliminar/(:num)', 'Admin\ProductoController::eliminar/$1');
+
+    $routes->get('ventas', 'Admin\VentaController::index');
+    $routes->get('ventas/(:num)', 'Admin\VentaController::detalle/$1');
 });
 
 // $routes->get('/admin/dashboard', 'Admin\DashboardController::index');

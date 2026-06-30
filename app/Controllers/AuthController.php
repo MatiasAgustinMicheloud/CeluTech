@@ -98,7 +98,8 @@ class AuthController extends BaseController{
             'usuario_nombre' => 'required|min_length[2]',
             'usuario_apellido' => 'required|min_length[2]',
             'usuario_email' => 'required|valid_email|is_unique[usuarios.usuario_email]',
-            'usuario_password' => 'required|min_length[8]|regex_match[/^(?=.*[a-z])(?=.*[A-Z]).+$/]'
+            'usuario_password' => 'required|min_length[8]|regex_match[/^(?=.*[a-z])(?=.*[A-Z]).+$/]',
+            'confirmar_password'  => 'required|matches[usuario_password]'
         ];
 
         $messages = [
@@ -119,6 +120,10 @@ class AuthController extends BaseController{
                 'required'     => 'La contraseña es obligatoria.',
                 'min_length'   => 'La contraseña debe tener al menos 8 caracteres.',
                 'regex_match'  => 'La contraseña debe tener al menos una mayúscula y una minúscula.'
+            ],
+            'confirmar_password' => [
+                'required' => 'Tenés que confirmar la contraseña.',
+                'matches'  => 'Las contraseñas no coinciden.'
             ]
         ];
 

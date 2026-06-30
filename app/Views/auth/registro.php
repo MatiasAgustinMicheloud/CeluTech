@@ -29,7 +29,11 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Contraseña</label>
-                            <input type="password" name="usuario_password" class="form-control" >
+                            <input type="password" name="usuario_password" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Confirmar contraseña</label>
+                            <input type="password" name="confirmar_password" class="form-control">
                         </div>
                         <button type="submit" class="btn btn-dark w-100 text-uppercase mt-3">Registrarse</button>
                     </form>
