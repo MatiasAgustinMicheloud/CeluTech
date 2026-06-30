@@ -186,7 +186,7 @@
   <div class="row d-flex flex-wrap align-items-center">
     <div class="col-md-6 col-sm-12">
       <div class="text-content offset-4 padding-medium">
-        <h3>Hasta 15% off</h3>
+        <!-- <h3>Hasta 15% off</h3> -->
         <h2 class="display-2 pb-5 text-uppercase text-dark">Ofertas de la semana</h2>
         <a href="<?= base_url('catalogo?oferta=1') ?>" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Ver Ofertas</a>
       </div>
