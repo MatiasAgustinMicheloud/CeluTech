@@ -76,6 +76,10 @@ $routes->get('/checkout', 'CheckoutController::index');
 $routes->post('/checkout/confirmar', 'CheckoutController::confirmar');
 $routes->get('/factura/(:num)', 'CheckoutController::factura/$1');
 
+//Rutas para el historial de compras
+$routes->get('/historial', 'HistorialController::index');
+$routes->get('/historial/(:num)', 'HistorialController::detalle/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
