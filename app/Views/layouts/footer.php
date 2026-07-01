@@ -17,7 +17,7 @@
                   <h5 class="widget-title pb-2">Tienda</h5>
                   <ul class="menu-list list-unstyled text-uppercase">
                     <li class="menu-item pb-2"><a href="<?= base_url('/') ?>">Home</a></li>
-                    <li class="menu-item pb-2"><a href="#about">Sobre nosotros</a></li>
+                    <!-- <li class="menu-item pb-2"><a href="#about">Sobre nosotros</a></li> -->
                     <li class="menu-item pb-2"><a href="<?= base_url('catalogo') ?>">Productos</a></li>
                     <li class="menu-item pb-2"><a href="<?= base_url('catalogo?oferta=1') ?>">Ofertas</a></li>
                   </ul>

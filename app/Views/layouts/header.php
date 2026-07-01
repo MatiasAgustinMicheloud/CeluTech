@@ -152,9 +152,9 @@
                 <li class="nav-item">
                   <a class="nav-link me-4" href="<?= base_url('catalogo?oferta=1') ?>">Ofertas</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link me-4" href="#about">Sobre nosotros</a>
-                </li>
+                </li> -->
 
 
                 <li class="nav-item dropdown">
