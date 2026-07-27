@@ -4,6 +4,18 @@
         <a href="<?= base_url('admin/productos/crear') ?>" class="btn btn-dark">+ Nuevo Producto</a>
     </div>
 
+    <form method="GET" action="<?= base_url('admin/productos') ?>" class="row g-3 mb-4">
+        <div class="col-md-8">
+            <input type="text" name="busqueda" class="form-control" 
+                placeholder="Buscar por nombre o marca..." 
+                value="<?= $busqueda ?? '' ?>">
+        </div>
+        <div class="col-md-4 d-flex gap-2">
+            <button type="submit" class="btn btn-dark">Buscar</button>
+            <a href="<?= base_url('admin/productos') ?>" class="btn btn-secondary">Limpiar</a>
+        </div>
+    </form>
+
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>

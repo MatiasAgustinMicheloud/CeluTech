@@ -49,7 +49,7 @@ Class CarritoController extends BaseController{
             $carrito[$id_producto] = [
                 'id_producto' => $producto['id_producto'],
                 'producto_nombre' => $producto['producto_nombre'],
-                'producto_precio' => $producto['prducto_precio_oferta'] ?? $producto['producto_precio'],
+                'producto_precio' => $producto['producto_precio_oferta'] ?? $producto['producto_precio'],
                 'producto_imagen' => $producto['producto_imagen'],
                 'cantidad' => $cantidad
             ];

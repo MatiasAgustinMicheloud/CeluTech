@@ -152,9 +152,9 @@
                 <li class="nav-item">
                   <a class="nav-link me-4" href="<?= base_url('catalogo?oferta=1') ?>">Ofertas</a>
                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link me-4" href="#about">Sobre nosotros</a>
-                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link me-4" href="<?= base_url('contacto') ?>">Contacto</a>
+                </li>
 
 
                 <li class="nav-item dropdown">
@@ -174,6 +174,9 @@
                               <li>
                                   <a href="<?= base_url('historial') ?>" class="dropdown-item">Historial de compras</a>
                               </li>
+                              <li>
+                                <a href="<?= base_url('perfil') ?>" class="dropdown-item">Mi perfil</a>
+                            </li>
                           <?php endif; ?>
                           <li>
                               <a href="<?= base_url('logout') ?>" class="dropdown-item">Cerrar sesión</a>
@@ -192,6 +195,14 @@
                           </li>
                       </ul>
                   <?php endif; ?>
+                </li>
+
+                <li class="nav-item">
+                  <a href="<?= base_url('carrito') ?>" class="ps-3">
+                      <svg class="cart" style="width: 20px; height: 20px;">
+                          <use xlink:href="#cart"></use>
+                      </svg>
+                  </a>
                 </li>
 
 

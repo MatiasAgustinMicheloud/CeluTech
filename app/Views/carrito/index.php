@@ -42,7 +42,11 @@
             <a href="<?= base_url('carrito/vaciar') ?>" class="btn btn-secondary" onclick="return confirm('¿Vaciar carrito?')">Vaciar carrito</a>
             <div class="text-end">
                 <h4>Total: $<?= number_format($total, 2) ?></h4>
-                <a href="<?= base_url('checkout') ?>" class="btn btn-dark text-uppercase mt-2">Confirmar compra</a>
+                <?php if(session()->get('logueado')): ?>
+                    <a href="<?= base_url('checkout') ?>" class="btn btn-dark text-uppercase mt-2">Confirmar compra</a>
+                <?php else: ?>
+                    <a href="<?= base_url('login') ?>" class="btn btn-dark text-uppercase mt-2">Iniciá sesión para comprar</a>
+                <?php endif; ?>
             </div>
         </div>
     <?php endif; ?>

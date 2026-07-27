@@ -62,6 +62,9 @@ $routes->group('admin', ['filter' => 'admin'], function($routes) {
 
     $routes->get('ventas', 'Admin\VentaController::index');
     $routes->get('ventas/(:num)', 'Admin\VentaController::detalle/$1');
+
+    $routes->get('consultas', 'Admin\ConsultaController::index');
+    $routes->get('consultas/leido/(:num)', 'Admin\ConsultaController::marcarLeido/$1');
 });
 
 // $routes->get('/admin/dashboard', 'Admin\DashboardController::index');
@@ -100,6 +103,20 @@ $routes->get('/factura/(:num)', 'CheckoutController::factura/$1');
 //Rutas para el historial de compras
 $routes->get('/historial', 'HistorialController::index');
 $routes->get('/historial/(:num)', 'HistorialController::detalle/$1');
+
+
+//Rutas vistas nuevas
+$routes->get('/comercializacion', 'PaginasController::comercializacion');
+$routes->get('/terminos', 'PaginasController::terminos');
+$routes->get('/quienes-somos', 'PaginasController::quienesSomos');
+
+//Rutas consultas
+$routes->get('/contacto', 'ConsultaController::index');
+$routes->post('/contacto/enviar', 'ConsultaController::enviar');
+
+//Rutas para editar perfil
+$routes->get('/perfil', 'PerfilController::index');
+$routes->post('/perfil/actualizar', 'PerfilController::actualizar');
 
 /*
  * --------------------------------------------------------------------

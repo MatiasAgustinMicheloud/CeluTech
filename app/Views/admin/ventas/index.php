@@ -1,6 +1,22 @@
 <div class="container" style="padding-top: 120px; margin-bottom: 50px;">
     <h2 class="text-uppercase mb-4">Ventas</h2>
 
+
+    <form method="GET" action="<?= base_url('admin/ventas') ?>" class="row g-3 mb-4">
+        <div class="col-md-4">
+            <label class="form-label">Fecha desde</label>
+            <input type="date" name="fecha_desde" class="form-control" value="<?= $fecha_desde ?? '' ?>">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Fecha hasta</label>
+            <input type="date" name="fecha_hasta" class="form-control" value="<?= $fecha_hasta ?? '' ?>">
+        </div>
+        <div class="col-md-4 d-flex align-items-end gap-2">
+            <button type="submit" class="btn btn-dark">Filtrar</button>
+            <a href="<?= base_url('admin/ventas') ?>" class="btn btn-secondary">Limpiar</a>
+        </div>
+    </form>
+
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>

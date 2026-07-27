@@ -11,12 +11,25 @@ class VentaController extends BaseController
     public function index()
     {
         $ventaModel = new VentaModel();
-        $data['ventas'] = $ventaModel
+        
+        $fecha_desde = $this->request->getGet('fecha_desde');
+        $fecha_hasta = $this->request->getGet('fecha_hasta');
+
+        $query = $ventaModel
             ->select('ventas.*, usuarios.usuario_nombre, usuarios.usuario_apellido')
             ->join('usuarios', 'usuarios.id_usuario = ventas.id_usuario')
-            ->orderBy('venta_fecha', 'DESC')
-            ->findAll();
+            ->orderBy('venta_fecha', 'DESC');
 
+        if ($fecha_desde) {
+            $query->where('venta_fecha >=', $fecha_desde . ' 00:00:00');
+        }
+        if ($fecha_hasta) {
+            $query->where('venta_fecha <=', $fecha_hasta . ' 23:59:59');
+        }
+
+        $data['ventas'] = $query->findAll();
+        $data['fecha_desde'] = $fecha_desde;
+        $data['fecha_hasta'] = $fecha_hasta;
         $data['titulo'] = 'Ventas - CeluTech';
         echo view('layouts/header.php', $data);
         echo view('admin/ventas/index', $data);

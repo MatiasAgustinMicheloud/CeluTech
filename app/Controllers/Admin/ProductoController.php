@@ -11,9 +11,23 @@ class ProductoController extends BaseController
     public function index()
     {
         $model = new ProductoModel();
-        $data['productos'] = $model->select('productos.*, marcas.marca_nombre')
-                                   ->join('marcas', 'marcas.id_marca = productos.id_marca')
-                                   ->findAll();
+
+        $busqueda = $this->request->getGet('busqueda');
+
+        $query = $productoModel = $model
+            ->select('productos.*, marcas.marca_nombre')
+            ->join('marcas', 'marcas.id_marca = productos.id_marca');
+
+        if ($busqueda) {
+            $query->groupStart()
+                ->like('producto_nombre', $busqueda)
+                ->orLike('productos.id_producto', $busqueda)
+                ->orLike('marcas.marca_nombre', $busqueda)
+                ->groupEnd();
+        }
+
+        $data['productos'] = $query->findAll();
+        $data['busqueda'] = $busqueda;
         $data['titulo'] = 'Productos - CeluTech';
         echo view('layouts/header.php', $data);
         echo view('admin/productos/index', $data);

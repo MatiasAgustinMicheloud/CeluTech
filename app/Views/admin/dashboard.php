@@ -20,5 +20,11 @@
                 <a href="<?= base_url('admin/ventas') ?>" class="btn btn-dark mt-3">Gestionar</a>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card text-center p-4 shadow">
+                <h5>Consultas</h5>
+                <a href="<?= base_url('admin/consultas') ?>" class="btn btn-dark mt-3">Gestionar</a>
+            </div>
+        </div>
     </div>
 </div>
