@@ -1,4 +1,5 @@
-<footer id="footer" class="overflow-hidden">
+<hr style="margin: 0; padding: 0;">
+<footer id="footer" class="overflow-hidden bg-light" style="padding-top: 20px;">
       <div class="container">
         <div class="row">
           <div class="footer-top-area">
@@ -52,13 +53,10 @@
           </div>
         </div>
       </div>
-      <hr>
     </footer>
 
-
-
-
-    <div id="footer-bottom">
+<hr style="margin: 0; padding: 0;">
+    <div id="footer-bottom" class="overflow-hidden bg-secondary" style="padding-top: 20px;">
       <div class="container">
         <div class="row d-flex flex-wrap justify-content-between">
           <div class="col-md-4 col-sm-6">

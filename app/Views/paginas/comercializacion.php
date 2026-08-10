@@ -18,4 +18,7 @@
             <p>Todos nuestros productos cuentan con garantía oficial del fabricante. Ante cualquier inconveniente, contactanos a contacto@celutech.com</p>
         </div>
     </div>
+    <div class="text-center mb-4">
+        <img src="<?= base_url('public/images/product-item4.jpg') ?>" style="max-width: 30%;">
+    </div>
 </div>

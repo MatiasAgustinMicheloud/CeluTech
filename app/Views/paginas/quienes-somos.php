@@ -15,4 +15,15 @@
             <img src="<?= base_url('public/images/banner-image.png') ?>" alt="CeluTech" style="max-width: 50%;">
         </div>
     </div>
+
+    <div class="mb-4">
+        <h5 class="text-uppercase mb-3">Nuestra ubicación</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d663.7833550854658!2d-58.83240575784973!3d-27.466979444169993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456ca6d24ec0c9%3A0xb92ce3fedb0d7729!2s%C3%81rea%20Graduados%20-%20Ciencias%20Exactas%20y%20Naturales%20y%20Agrimensura%20-%20UNNE!5e1!3m2!1ses-419!2sar!4v1785325780510!5m2!1ses-419!2sar" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
 </div>
